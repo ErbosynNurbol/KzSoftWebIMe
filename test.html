@@ -1,0 +1,80 @@
+﻿<html>
+	<head>
+		<title>testing for program on kazakh language</title>
+		<style type="text/css">
+		 	body{
+		 		font-family:KazNet;
+		 		font-size:16px;
+		 	}
+		 	#container{
+		 		width:800px;
+		 		margin:0 auto;
+		 	}
+		 	h1{
+		 		color:#0094ff;
+		 		text-align:center;
+		 	}
+		 	#container div{
+		 		padding:5px 30px;
+		 	}
+		 	textarea{
+		 		direction:rtl;
+		 		font-family:KazNet;
+		 	}
+		 	#arb{
+		 			width:300px;
+		 			height:35px;
+		 			background-color:#0094ff;
+					line-height:35px;
+					color:white;
+					float:right;
+					text-align:center;
+					cursor: pointer;
+		 		}
+		 		#cyrl{
+		 			width:300px;
+		 			height:35px;
+		 			background-color:#0094ff;
+					line-height:35px;
+					color:white;
+					float:left;
+					text-align:center;
+					cursor: pointer;
+		 		}
+		 		#status{
+		 			height:45px;
+		 			line-height:45px;
+		 			color:red;
+		 			font-size:20px;
+		 		}
+		</style>
+		<script type="text/javascript" src="KzSoftWebIMeV3.js" ></script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>testing for program on kazakh language</h1>
+			<hr>
+			<div style="height:35px;line-height:35px;text-align:center;"><a href="http://suhbat.kazakhsoft.com/Read.aspx?TID=7863">http://www.kazakhsoft.com</a></div>
+			<div style="text-align:center;"><textarea cols="120" rows="10" name="txt" id ="text"></textarea></div>
+			<div><div id="arb">قازاقشا</div><div id="cyrl">Қазақша</div></div>
+			<div id="status">wLanguage = "arb";</div>
+		</div>
+		<script type="text/javascript">
+			var oArb = document.getElementById("arb");
+			var oCyrl = document.getElementById("cyrl");
+			var oText = document.getElementById("text");
+			var oStatus=document.getElementById("status");
+			
+			oArb.onclick= function(){
+				wLanguage = "arb";
+				oText.style.direction = "rtl";
+				oStatus.innerHTML = 'wLanguage = "arb";';		
+			}
+			oCyrl.onclick= function(){
+				wLanguage = "cyrl";
+				oText.style.direction = "ltr";
+				oStatus.innerHTML = 'wLanguage = "cyrl";';		
+			}
+		</script>
+	</body>
+</html>
