@@ -44,7 +44,7 @@ var keyCyrlMap = {"A":"0x0424","a":"0x0444","B":"0x0418","b":"0x0438","C":"0x042
 		}else{
 			var currPos = obj.selectionStart;
 			var objValue=obj.value;
-			obj.value = objValue.substring(0,currPos)+str+objValue.substring(currPos+1);
+			obj.value = objValue.substring(0,currPos)+str+objValue.substring(currPos);
 			obj.selectionStart = obj.selectionEnd =currPos+1;
 		}
 	}
