@@ -81,9 +81,7 @@ var keyCyrlMap = {"A":"0x0424","a":"0x0444","B":"0x0418","b":"0x0438","C":"0x042
 	}
 	
 	function AddEvent(obj, evn, fun){
-		if(obj&&!(obj.tagName == "TEXTAREA" ||
-		(obj.tagName == "INPUT" && obj.type == "text")))
-				return ;
+		if(!obj||(obj&&!(obj.tagName == "TEXTAREA" ||(obj.tagName == "INPUT" && obj.type == "text"))))return ;
 		  if(document.all){
 		   	obj.attachEvent('on'+evn, fun);
 		   }else{
@@ -92,9 +90,7 @@ var keyCyrlMap = {"A":"0x0424","a":"0x0444","B":"0x0418","b":"0x0438","C":"0x042
 	}
 	
 	function RemoveEvent(obj, evn, fun){
-		if(obj&&!(obj.tagName == "TEXTAREA" ||
-		(obj.tagName == "INPUT" && obj.type == "text")))
-				return ;
+		if(!obj||(obj&&!(obj.tagName == "TEXTAREA" ||(obj.tagName == "INPUT" && obj.type == "text"))))return ;
 		  if(document.all){
 		   	obj.detachEvent('on'+evn, fun);
 		   }else{
