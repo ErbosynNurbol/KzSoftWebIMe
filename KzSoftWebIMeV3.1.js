@@ -40,11 +40,14 @@ var keyCyrlMap = {"A":"0x0424","a":"0x0444","B":"0x0418","b":"0x0438","C":"0x042
 	function Insert(obj, str){
 		if(document.selection){
 			var oSel = document.selection.createRange();
-			oSel.text = str;
+				oSel.text = str;
+			  	oSel.collapse(false);
+			  	oSel.select();
 		}else{
 			var currPos = obj.selectionStart;
+			var endPos = obj.selectionEnd;
 			var objValue=obj.value;
-			obj.value = objValue.substring(0,currPos)+str+objValue.substring(currPos);
+			obj.value = objValue.substring(0,currPos)+str+objValue.substring(endPos);
 			obj.selectionStart = obj.selectionEnd =currPos+1;
 		}
 	}
